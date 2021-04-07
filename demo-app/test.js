@@ -8,9 +8,16 @@ var obj = [{ name: 'A', age: "1" },
 
 console.log(obj.map(ele => ele["name"]))
 
-var obj = [14, 12, 13, 12];
+var obj = [14, 12, 13, 12, 123];
 console.log(obj.filter(ele => obj.indexOf(ele) % 2 == 0))
 console.log(obj.find(ele => ele % 2 == 0))
 console.log(obj.filter(ele => ele % 2 == 0))
-
-////lodas
+console.log(obj.map(ele => ele * 2))
+console.log(obj)
+obj.reverse()
+console.log(obj)
+obj.sort( (a,b) => {
+    return a - b;
+})
+console.log(obj)
+////lodash

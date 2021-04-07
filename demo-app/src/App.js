@@ -1,26 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+import Counter from './Counter.js'
+import React from 'react';
+
 
 function App() {
+  const [sum, setSum] = React.useState(0);
+
+  const increaseSum = () => {
+    setSum(sum + 1);
+  }
+
+  React.useEffect(() => {
+    document.title = sum
+  }, [sum])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello world!!!
-        </p>
-        <p>
-          Learn React
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 123
-        </a>
-      </header>
+      Number of click on button: {sum}
+      <Counter extraValue={1} counterName={"ABC"} event={increaseSum}/>
+      <Counter extraValue={10} counterName={"DEF"} event={increaseSum} />
+      <Counter extraValue={20} counterName={"GHI"} event={increaseSum} />
     </div>
   );
 }
