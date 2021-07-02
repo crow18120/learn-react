@@ -1,0 +1,5 @@
+export const IncreaseCountType = "Increase_Count"
+export const DecreaseCountType = "Decrease_Count"
+export const ResetCountType = "Reset_Count"
+export const UpdateAmountType = "Get_Amount"
+export const GetCountType = "Get_Count"

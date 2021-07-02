@@ -42,8 +42,20 @@ function App() {
   const completeTask = _.orderBy(arrays[0], "completeDate", "desc");
   const incompleteTask = _.orderBy(arrays[1], "createDate", "desc");
 
+  const [count, setCount] = useState();
+
+  const handleIncrease = () => {
+    setCount(count => count = count + 1)
+  }
+
+  const handleDecrease = () => {
+    setCount(count => count = count - 1)
+  }
   return (
     <div className={classes.app}>
+      <p>{count}</p>
+      <button onClick={handleIncrease}>+</button>
+      <button onClick={handleDecrease}>-</button>
       <Title className={classes.header}>Todo app</Title>
       <div className={classes.taskInputContainer}>
         <TaskInput onCompletionAddChanged={handleAddNewTask} />

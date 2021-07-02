@@ -19,8 +19,6 @@ function App() {
     <div className="App">
       Number of click on button: {sum}
       <Counter extraValue={1} counterName={"ABC"} event={increaseSum}/>
-      <Counter extraValue={10} counterName={"DEF"} event={increaseSum} />
-      <Counter extraValue={20} counterName={"GHI"} event={increaseSum} />
     </div>
   );
 }
